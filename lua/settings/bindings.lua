@@ -16,6 +16,8 @@ bind('n', 'gr','<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true, silent 
 
 --Compe bindings
 bind('i', '<C-Space>', 'compe#complete()', {noremap = true, silent = true, expr=true})
+bind('i', '<CR>', 'compe#confirm("<CR>")', {noremap = true, silent = true, expr=true})
+bind('i', '<C-e>', 'compe#close("<C-e>")', {noremap = true, silent = true, expr=true})
 
 
 

@@ -4,6 +4,7 @@ cmd("syntax on")
 cmd("set rnu")
 cmd("set nu")
 cmd("set termguicolors")
+cmd("set autochdir")
 
 cmd("colorscheme one")
 
