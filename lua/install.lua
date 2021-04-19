@@ -13,7 +13,7 @@ execute 'autocmd BufWritePost plugins.lua PackerCompile'
 return require("packer").startup(function (use)
 use 'wbthomason/packer.nvim'
 
-use 'rakr/vim-one'
+use {'embark-theme/vim', as = 'embark'}
 
 use 'junegunn/fzf.vim'
 
@@ -36,10 +36,6 @@ use 'windwp/nvim-autopairs'
 use 'neovim/nvim-lspconfig'
 
 use 'hrsh7th/nvim-compe'
-
-use 'SirVer/ultisnips'
-
-use 'honza/vim-snippets'
 
 use 'sbdchd/neoformat'
 

@@ -6,7 +6,7 @@ cmd("set nu")
 cmd("set termguicolors")
 cmd("set autochdir")
 
-cmd("colorscheme one")
+cmd("colorscheme embark")
 
 vim.o.completeopt = "menuone,noselect"
 vim.o.tabstop = 2
