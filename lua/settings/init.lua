@@ -1,2 +1,2 @@
 require 'settings.editor'
-require 'settings.bindings'
+require 'settings.keymaps'

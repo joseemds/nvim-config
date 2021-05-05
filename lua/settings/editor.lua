@@ -3,10 +3,16 @@ local gvar = vim.api.nvim_set_var
 cmd("syntax on")
 cmd("set rnu")
 cmd("set nu")
+cmd("set hidden")
+cmd("set noswapfile")
 cmd("set termguicolors")
-cmd("set autochdir")
 
-cmd("colorscheme embark")
+vim.g.tokyonight_style = "storm"
+
+cmd("colorscheme tokyonight")
+
+
+vim.g.airline_theme = "tokyonight"
 
 vim.o.completeopt = "menuone,noselect"
 vim.o.tabstop = 2

@@ -11,11 +11,19 @@ end
 execute 'autocmd BufWritePost plugins.lua PackerCompile'
 
 return require("packer").startup(function (use)
+
+--packer itself
 use 'wbthomason/packer.nvim'
 
-use {'embark-theme/vim', as = 'embark'}
+--utils
 
-use 'junegunn/fzf.vim'
+use 'kdheepak/lazygit.nvim'
+
+use 'nvim-treesitter/nvim-treesitter'
+
+use 'nvim-treesitter/playground'
+
+use 'mbbill/undotree'
 
 use 'christoomey/vim-tmux-navigator'
 
@@ -33,25 +41,50 @@ use 'vim-airline/vim-airline'
 
 use 'windwp/nvim-autopairs'
 
-use 'neovim/nvim-lspconfig'
 
 use 'hrsh7th/nvim-compe'
 
 use 'sbdchd/neoformat'
 
-use 'nvim-treesitter/nvim-treesitter'
+use {
+  'nvim-telescope/telescope.nvim',
+  requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+}
 
 use {
-  'ojroques/nvim-lspfuzzy',
-  requires = {
-    {'junegunn/fzf'},
-    {'junegunn/fzf.vim'},  -- to enable preview (optional)
-  },
+	'nvim-telescope/telescope-fzf-writer.nvim',
+	requires = {{'nvim-telescope/telescope.nvim'}}
 }
 
 
 
+--lang related
 
+use 'elixir-editors/vim-elixir'
+
+
+--LSP and related
+
+use 'neovim/nvim-lspconfig'
+
+use 'rafamadriz/friendly-snippets'
+
+use 'hrsh7th/vim-vsnip'
+
+use 'glepnir/lspsaga.nvim'
+
+use {
+  "folke/lsp-trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {}
+  end
+}
+
+--UI
+
+use {'embark-theme/vim', as = 'embark'}
+use 'ghifarit53/tokyonight-vim'
 
 end)
 

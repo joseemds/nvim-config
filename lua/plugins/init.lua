@@ -1,3 +1,5 @@
 require 'plugins.nvim-compe'
-require 'plugins.nvim-lspfuzzy'
+require 'plugins.nvim-tree'
 require 'plugins.nvim-treesitter'
+require 'plugins.telescope'
+require 'plugins.lspsaga'
