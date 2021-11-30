@@ -1,11 +1,10 @@
 local lspconfig = require('lspconfig')
 
+local home = vim.fn.expand("$HOME")
+
 local on_attach = function(client)
   print("'" .. client.name .. "' server attached")
 end
-
-local home = vim.fn.expand("$HOME")
-
 
 local sumneko_root_path= home.."/lsp/lua-language-server"
 local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
@@ -23,7 +22,17 @@ lspconfig.tsserver.setup{
 }
 
 lspconfig.elixirls.setup{
-	cmd = {home.."/lsp/elixir-language-server/language_server.sh"}
+	cmd = {home.."/lsp/elixir-language-server/language_server.sh"},
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+}
+
+lspconfig.clangd.setup{
+  on_attach = on_attach
+}
+
+lspconfig.fsautocomplete.setup{
+  on_attach=on_attach
 }
 
 

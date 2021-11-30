@@ -8,14 +8,16 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
-execute 'autocmd BufWritePost plugins.lua PackerCompile'
-
-return require("packer").startup(function (use)
+require("packer").startup(function (use)
 
 --packer itself
 use 'wbthomason/packer.nvim'
 
+
+use 'rxi/lume'
+
 --utils
+use 'sheerun/vim-polyglot'
 
 use 'kdheepak/lazygit.nvim'
 
@@ -27,8 +29,6 @@ use 'mbbill/undotree'
 
 use 'christoomey/vim-tmux-navigator'
 
-use 'preservim/nerdcommenter'
-
 use 'tpope/vim-surround'
 
 use 'tpope/vim-fugitive'
@@ -37,12 +37,14 @@ use 'kyazdani42/nvim-tree.lua'
 
 use 'kyazdani42/nvim-web-devicons'
 
-use 'vim-airline/vim-airline'
-
 use 'windwp/nvim-autopairs'
 
+use 'nvim-lua/completion-nvim'
 
-use 'hrsh7th/nvim-compe'
+
+-- deprecated
+-- use 'hrsh7th/nvim-compe'
+
 
 use 'sbdchd/neoformat'
 
@@ -55,12 +57,6 @@ use {
 	'nvim-telescope/telescope-fzf-writer.nvim',
 	requires = {{'nvim-telescope/telescope.nvim'}}
 }
-
-
-
---lang related
-
-use 'elixir-editors/vim-elixir'
 
 
 --LSP and related
@@ -86,5 +82,39 @@ use {
 use {'embark-theme/vim', as = 'embark'}
 use 'ghifarit53/tokyonight-vim'
 
+
+use 'romgrk/barbar.nvim'
+
+use {
+  "folke/todo-comments.nvim",
+  requires = "nvim-lua/plenary.nvim",
+  config = function()
+    require("todo-comments").setup {}
+  end
+}
+
+use { 'camspiers/snap' }
+
+use "terrortylor/nvim-comment"
+
+use "Shatur/neovim-ayu"
+
+use "tamago324/lir.nvim"
+
+use "tamago324/lir-git-status.nvim"
+
+use 'TimUntersberger/neogit'
+
+use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+
+use 'hrsh7th/nvim-cmp'
+use 'hrsh7th/cmp-nvim-lsp'
+use 'hrsh7th/cmp-buffer'
+
+use 'glepnir/galaxyline.nvim'
+
+
 end)
 
+
+require('hotpot')

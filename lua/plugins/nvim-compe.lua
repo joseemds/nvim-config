@@ -1,7 +1,7 @@
 require('compe').setup {
   enabled = true;
   autocomplete = true;
-  debug = false;
+  debug = true;
   min_length = 1;
   preselect = 'enable';
   throttle_time = 80;
