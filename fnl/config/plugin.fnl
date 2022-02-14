@@ -1,7 +1,5 @@
 (module config.plugin
-  {autoload {nvim aniseed.nvim
-             a aniseed.core
-             util config.util
+  {autoload {a aniseed.core
              packer packer}})
 
 (defn- safe-require-plugin-config [name]
@@ -24,6 +22,7 @@
   nil)
 
 ;plugins managed by packer
+
 (use
   ;plugin Manager
   :wbthomason/packer.nvim {}
@@ -46,4 +45,14 @@
                                 :PaterJason/cmp-conjure]
                      :mod :cmp}
   ;theme
-  :projekt0n/github-nvim-theme {:mod :theme})
+  :folke/tokyonight.nvim {}
+  :sheerun/vim-polyglot {}
+  
+  ; useful
+  :tamago324/lir.nvim { :mod :lir }
+  :phaazon/hop.nvim { :mod :hop }
+  :blackCauldron7/surround.nvim { :mod :surround }
+  :nvim-treesitter/nvim-treesitter-textobjects {}
+  :mhartington/formatter.nvim { :mod :formatter}
+
+  )

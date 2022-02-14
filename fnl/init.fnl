@@ -27,3 +27,8 @@
 
 ;import plugin.fnl
 (require :config.plugin)
+(require :config.editor)
+(require :config.plugin.treesitter)
+
+(set nvim.g.tokyonight_italic_keywords false)
+(nvim.ex.colorscheme :tokyonight)
