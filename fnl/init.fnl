@@ -29,6 +29,6 @@
 (require :config.plugin)
 (require :config.editor)
 (require :config.plugin.treesitter)
-
+(require :config.mappings)
 (set nvim.g.tokyonight_italic_keywords false)
 (nvim.ex.colorscheme :tokyonight)

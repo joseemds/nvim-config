@@ -26,6 +26,10 @@
                        :Y actions.yank_path
 
                        :n actions.newfile
+                       :N actions.mkdir
                        }
 
             })
+
+
+(nvim.set_keymap :n "-" ":edit %:h<CR>" {:noremap true})

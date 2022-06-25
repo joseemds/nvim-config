@@ -77,7 +77,14 @@
                                          {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :<leader>li
                                          ":lua require('telescope.builtin').lsp_implementations()<cr>"
-                                         {:noremap true})))]
+                                         {:noremap true})
+                    (nvim.buf_set_keymap bufnr :v :<leader>lf
+                                         "<cmd>lua vim.lsp.buf.range_formatting()<CR>"
+                                         {:noremap true}
+                                         )))]
   ;; OCaml
-  (lsp.ocamllsp.setup {: on_attach : handlers : capabilities}))
-
+  (lsp.ocamllsp.setup {: on_attach : handlers : capabilities})
+  (lsp.hls.setup {: on_attach : handlers : capabilities})
+  (lsp.vls.setup {: on_attach : handlers : capabilities})
+  ; (lsp.elixirls.setup {: on_attach : handlers : capabilities : {:cmd {1 :path/to/elixirls}})
+  (lsp.rust_analyzer.setup {: on_attach : handlers : capabilities}))

@@ -10,8 +10,7 @@
 (defn- use [...]
   "Iterates through the arguments as pairs and calls packer's use function for
   each of them. Works around Fennel not liking mixed associative and sequential
-  tables as well."
-  (let [pkgs [...]]
+  tables as well." (let [pkgs [...]]
     (packer.startup
       (fn [use]
         (for [i 1 (a.count pkgs) 2]
@@ -37,6 +36,8 @@
   ;parsing system
   :nvim-treesitter/nvim-treesitter {:run ":TSUpdate"
                                     :mod :treesitter}
+
+  :nvim-treesitter/playground {}
   ;lsp
   :neovim/nvim-lspconfig {:mod :lspconfig}
   ;autocomplete
@@ -51,8 +52,17 @@
   ; useful
   :tamago324/lir.nvim { :mod :lir }
   :phaazon/hop.nvim { :mod :hop }
-  :blackCauldron7/surround.nvim { :mod :surround }
+  :machakann/vim-sandwich {}
   :nvim-treesitter/nvim-treesitter-textobjects {}
   :mhartington/formatter.nvim { :mod :formatter}
-
+  :terrortylor/nvim-comment { :mod :comment }
+  :sindrets/diffview.nvim {}
+  :akinsho/toggleterm.nvim { :tag "v1.*"
+                              :mod :toggleterm 
+                            }
+  :iamcco/markdown-preview.nvim {
+                                 :run "cd app && npm install"
+                                 :setup (fn [] (set vim.g.mkdp_filetypes [:markdown]))
+                                 :ft [:markdown]
+                                 }
   )
