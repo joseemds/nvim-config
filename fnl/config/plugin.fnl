@@ -65,4 +65,6 @@
                                  :setup (fn [] (set vim.g.mkdp_filetypes [:markdown]))
                                  :ft [:markdown]
                                  }
+  :windwp/nvim-autopairs { :mod :autopairs}
+
   )
