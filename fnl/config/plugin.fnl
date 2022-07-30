@@ -66,5 +66,6 @@
                                  :ft [:markdown]
                                  }
   :windwp/nvim-autopairs { :mod :autopairs}
+  :ntpeters/vim-better-whitespace {}
 
   )
