@@ -84,7 +84,6 @@
                                          )))
         elixir_ls_path [(string.format "%s/dev/elixir/elixir-ls/language_server.sh" (vim.fn.expand "$HOME"))]
       ]
-  ;; OCaml
   (lsp.ocamllsp.setup {: on_attach : handlers : capabilities})
   (lsp.hls.setup {: on_attach : handlers : capabilities})
   (lsp.vls.setup {: on_attach : handlers : capabilities})
