@@ -48,7 +48,7 @@
   ;theme
   :folke/tokyonight.nvim {}
   :sheerun/vim-polyglot {}
-  
+
   ; useful
   :tamago324/lir.nvim { :mod :lir }
   :phaazon/hop.nvim { :mod :hop }
@@ -58,7 +58,7 @@
   :terrortylor/nvim-comment { :mod :comment }
   :sindrets/diffview.nvim {}
   :akinsho/toggleterm.nvim { :tag "v1.*"
-                              :mod :toggleterm 
+                              :mod :toggleterm
                             }
   :iamcco/markdown-preview.nvim {
                                  :run "cd app && npm install"
