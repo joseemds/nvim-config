@@ -85,6 +85,6 @@
   ;; OCaml
   (lsp.ocamllsp.setup {: on_attach : handlers : capabilities})
   (lsp.hls.setup {: on_attach : handlers : capabilities})
-  (lsp.vls.setup {: on_attach : handlers : capabilities})
-  ; (lsp.elixirls.setup {: on_attach : handlers : capabilities : {:cmd {1 :path/to/elixirls}})
+  ; (lsp.vls.setup {: on_attach : handlers : capabilities})
+  ; (lsp.elixirls.setup {: on_attach : handlers : capabilities : {:cmd {:1 "~/Downloads/vls_linux_x64"}}})
   (lsp.rust_analyzer.setup {: on_attach : handlers : capabilities}))

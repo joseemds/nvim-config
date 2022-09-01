@@ -2,7 +2,7 @@
   {autoload {nvim aniseed.nvim
              telescope telescope}})
 
-(telescope.setup {:defaults {:file_ignore_patterns ["node_modules"]}
+(telescope.setup {:defaults {:file_ignore_patterns ["node_modules" "esy.lock"]}
                   :pickers {:find_files {:find_command ["rg" "--files" "--iglob" "!.git" "--hidden"]}}})
 
 (nvim.set_keymap :n :<leader>ff ":lua require('telescope.builtin').find_files()<CR>" {:noremap true})
