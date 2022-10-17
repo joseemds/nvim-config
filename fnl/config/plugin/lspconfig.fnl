@@ -26,7 +26,7 @@
                                                   {:border :single})
                 :textDocument/signatureHelp (vim.lsp.with vim.lsp.handlers.signature_help
                                                           {:border :single})}
-      capabilities (cmplsp.update_capabilities (vim.lsp.protocol.make_client_capabilities))
+      capabilities cmplsp.default_capabilites 
       on_attach (fn [client bufnr]
                   (do
                     (nvim.buf_set_keymap bufnr :n :gd
@@ -86,5 +86,5 @@
   (lsp.ocamllsp.setup {: on_attach : handlers : capabilities})
   (lsp.hls.setup {: on_attach : handlers : capabilities})
   ; (lsp.vls.setup {: on_attach : handlers : capabilities})
-  ; (lsp.elixirls.setup {: on_attach : handlers : capabilities : {:cmd {:1 "~/Downloads/vls_linux_x64"}}})
+  (lsp.elixirls.setup {: on_attach : handles : capabilities :cmd ["/home/josee/dev/elixir/elixir-ls/language_server.sh"]})
   (lsp.rust_analyzer.setup {: on_attach : handlers : capabilities}))

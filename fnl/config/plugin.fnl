@@ -48,7 +48,7 @@
   ;theme
   :folke/tokyonight.nvim {}
   :sheerun/vim-polyglot {}
-  
+
   ; useful
   :tamago324/lir.nvim { :mod :lir }
   :phaazon/hop.nvim { :mod :hop }
@@ -58,7 +58,7 @@
   :terrortylor/nvim-comment { :mod :comment }
   :sindrets/diffview.nvim { :mod :diffview }
   :akinsho/toggleterm.nvim { :tag "v1.*"
-                              :mod :toggleterm 
+                              :mod :toggleterm
                             }
   :iamcco/markdown-preview.nvim {
                                  :run "cd app && npm install"
@@ -68,6 +68,7 @@
   :windwp/nvim-autopairs { :mod :autopairs}
   :ntpeters/vim-better-whitespace {}
   :glepnir/lspsaga.nvim {}
-  :L3MON4D3/LuaSnip { :mod :luasnip}
-  :saadparwaiz1/cmp_luasnip {}
+  :rafamadriz/friendly-snippets {}
+  :L3MON4D3/LuaSnip {}
+  :saadparwaiz1/cmp_luasnip { :mod :luasnip  }
   )
