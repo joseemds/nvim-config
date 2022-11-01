@@ -71,4 +71,6 @@
   :rafamadriz/friendly-snippets {}
   :L3MON4D3/LuaSnip {}
   :saadparwaiz1/cmp_luasnip { :mod :luasnip  }
+  :shatur/neovim-ayu {}
+  :sainnhe/everforest {}
   )
