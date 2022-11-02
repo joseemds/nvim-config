@@ -56,7 +56,7 @@
   :nvim-treesitter/nvim-treesitter-textobjects {}
   :mhartington/formatter.nvim { :mod :formatter}
   :terrortylor/nvim-comment { :mod :comment }
-  :sindrets/diffview.nvim {}
+  :sindrets/diffview.nvim { :mod :diffview }
   :akinsho/toggleterm.nvim { :tag "v1.*"
                               :mod :toggleterm
                             }
@@ -68,5 +68,10 @@
   :windwp/nvim-autopairs { :mod :autopairs }
   :ntpeters/vim-better-whitespace { :mod :betterws }
   :mfussenegger/nvim-dap { :mod :dap }
-
+  :glepnir/lspsaga.nvim {}
+  :rafamadriz/friendly-snippets {}
+  :L3MON4D3/LuaSnip {}
+  :saadparwaiz1/cmp_luasnip { :mod :luasnip  }
+  :shatur/neovim-ayu {}
+  :sainnhe/everforest {}
   )

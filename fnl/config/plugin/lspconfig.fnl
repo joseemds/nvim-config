@@ -26,7 +26,7 @@
                                                   {:border :single})
                 :textDocument/signatureHelp (vim.lsp.with vim.lsp.handlers.signature_help
                                                           {:border :single})}
-      capabilities (cmplsp.update_capabilities (vim.lsp.protocol.make_client_capabilities))
+      capabilities cmplsp.default_capabilites 
       on_attach (fn [client bufnr]
                   (do
                     (nvim.buf_set_keymap bufnr :n :gd

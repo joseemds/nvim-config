@@ -31,4 +31,4 @@
 (require :config.plugin.treesitter)
 (require :config.mappings)
 (set nvim.g.tokyonight_italic_keywords false)
-(nvim.ex.colorscheme :tokyonight)
+(nvim.ex.colorscheme :ayu-mirage)
