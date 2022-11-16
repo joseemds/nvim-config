@@ -74,4 +74,7 @@
   :saadparwaiz1/cmp_luasnip { :mod :luasnip  }
   :shatur/neovim-ayu {}
   :sainnhe/everforest {}
+  :nvim-telescope/telescope-fzf-native.nvim {
+                                             :run "make"
+                                             }
   )
