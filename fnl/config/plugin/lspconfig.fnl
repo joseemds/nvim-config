@@ -86,6 +86,12 @@
       ]
   (lsp.ocamllsp.setup {: on_attach : handlers : capabilities})
   (lsp.hls.setup {: on_attach : handlers : capabilities})
+<<<<<<< HEAD
   (lsp.vls.setup {: on_attach : handlers : capabilities})
   (lsp.elixirls.setup {:cmd elixir_ls_path : on_attach : handlers : capabilites})
+=======
+  (lsp.tsserver.setup {: on_attach : handlers : capabilities})
+  ; (lsp.vls.setup {: on_attach : handlers : capabilities})
+  (lsp.elixirls.setup {: on_attach : handles : capabilities :cmd ["/home/josee/dev/elixir/elixir-ls/language_server.sh"]})
+>>>>>>> 04b18f3 (add typescript server)
   (lsp.rust_analyzer.setup {: on_attach : handlers : capabilities}))
