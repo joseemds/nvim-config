@@ -54,7 +54,7 @@
                                          "<cmd>lua vim.diagnostic.setloclist()<CR>"
                                          {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :<leader>lf
-                                         "<cmd>lua vim.lsp.buf.formatting()<CR>"
+                                         "<cmd>lua vim.lsp.buf.format {async = true}<CR>"
                                          {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :<leader>lj
                                          "<cmd>lua vim.diagnostic.goto_next()<CR>"
@@ -64,7 +64,7 @@
                                          {:noremap true})
                     ;telescope
                     (nvim.buf_set_keymap bufnr :n :<leader>la
-                                         ":lua require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor())<cr>"
+                                         "<Cmd>Lspsaga code_action<CR>"
                                          {:noremap true})
                     (nvim.buf_set_keymap bufnr :v :<leader>la
                                          ":'<,'>:Telescope lsp_range_code_actions theme=cursor<cr>"
