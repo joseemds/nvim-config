@@ -2,4 +2,4 @@
   {autoload {nvim aniseed.nvim}})
 
 
-(nvim.set_keymap :n "<leader>d" "<Cmd>:DiffViewOpen<CR>")
+(nvim.set_keymap :n "<leader>d" "<Cmd>:DiffViewOpen<CR>" {:noremap true})
