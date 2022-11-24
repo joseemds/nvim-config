@@ -8,6 +8,8 @@
 (nvim.set_keymap :n :<space> :<nop> {:noremap true})
 (set nvim.g.mapleader " ")
 (set nvim.g.maplocalleader ",")
+; remove ~ on empty lines
+(set nvim.o.fillchars "eob: ")
 
 ;don't wrap lines
 (nvim.ex.set :nowrap)
@@ -31,4 +33,4 @@
 (require :config.plugin.treesitter)
 (require :config.mappings)
 (set nvim.g.tokyonight_italic_keywords false)
-(nvim.ex.colorscheme :ayu-mirage)
+(nvim.ex.colorscheme :everforest) 

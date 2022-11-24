@@ -77,4 +77,7 @@
   :nvim-telescope/telescope-fzf-native.nvim {
                                              :run "make"
                                              }
+  :tpope/vim-surround {}
+  :junegunn/goyo.vim {}
+  :folke/zen-mode.nvim { :mod :zen}
   )
